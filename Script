@@ -109,3 +109,16 @@ Mm2:AddButton({
               loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
       end
 })
+
+local Brookhaven = Window:MakeTab({
+    Name = "Читы на Brookhaven",
+    Icon = "rbxassetid://14273889332",
+    PremiumOnly = false
+})
+
+Brookhaven:AddButton({
+    Name = "4D",
+    Callback = function()
+              loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
+      end
+})
