@@ -135,3 +135,10 @@ Slap_Battles:AddButton({
               loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))()
       end
 })
+
+Slap_Battles:AddButton({
+    Name = "Ui",
+    Callback = function()
+              loadstring(game:HttpGet("https://scriptblox.com/raw/Slap-Battles-UI-v1-12403"))()
+      end
+})
