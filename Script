@@ -122,3 +122,16 @@ Brookhaven:AddButton({
               loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
       end
 })
+
+local Slap_Battles = Window:MakeTab({
+    Name = "Читы на Slap Battles",
+    Icon = "rbxassetid://14273889332",
+    PremiumOnly = false
+})
+
+Slap_Battles:AddButton({
+    Name = "Slap Aura, Rejoin (Possible ban)",
+    Callback = function()
+              loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))()
+      end
+})
