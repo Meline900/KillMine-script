@@ -183,3 +183,16 @@ Prison_Life:AddButton({
               loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\103\48\48\108\88\112\108\111\105\116\101\114\47\103\48\48\108\88\112\108\111\105\116\101\114\47\109\97\105\110\47\70\101\37\50\48\98\121\112\97\115\115\34\44\32\116\114\117\101\41\41\40\41\10")()
       end
 })
+
+local Road_to_Gramby = Window:MakeTab({
+    Name = "Road to Gramby",
+    Icon = "rbxassetid://14273889332",
+    PremiumOnly = false
+})
+
+Road_to_Gramby:AddButton({
+    Name = "",
+    Callback = function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/HoodedPeak8313/Road-to-Grambys-Script/main/gui.lua"))()
+      end
+})
