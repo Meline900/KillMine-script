@@ -88,7 +88,13 @@ Chaos:AddButton({
     Name = "Gui",
     Callback = function()
               loadstring(game:HttpGet("https://raw.githubusercontent.com/Juanko-Scripts/Roblox-scripts/main/Chaos%20Destrozer%20Hub"))()
+      end
+})
 
+Chaos:AddButton({
+    Name = "Katana",
+    Callback = function()
+              loadstring(game:HttpGet("https://scriptblox.com/raw/Cacophony-Small-Update-Sussy-Hub-12623"))()
       end
 })
 
