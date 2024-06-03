@@ -196,3 +196,47 @@ Road_to_Gramby:AddButton({
               loadstring(game:HttpGet("https://raw.githubusercontent.com/HoodedPeak8313/Road-to-Grambys-Script/main/gui.lua"))()
       end
 })
+
+local Ball_and_Axe = Window:MakeTab({
+    Name = "Ball and Axe",
+    Icon = "rbxassetid://14273889332",
+    PremiumOnly = false
+})
+
+Ball_and_Axe:AddButton({
+    Name = "Unlocks Axe, Removes Limitst",
+    Callback = function()
+               local plr = game.Players.LocalPlayer.Name
+               for _,v in pairs(game:GetService("Workspace").playerModels:GetDescendants()) do
+               if v.Name == plr then
+               v.ball.spinner.LimitsEnabled = false
+               end
+               end
+      end
+})
+
+Ball_and_Axe:AddButton({
+    Name = "Fast Win",
+    Callback = function()
+            function finishpos()
+                -- credit by loi#8700 :)
+                game:GetService("Workspace").playerModels[game.Players.LocalPlayer.Character.Name].ball.CFrame = CFrame.new(-109.874924, 513.699951, 0.574999571, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                -- credit by loi#8700 :)
+                end
+                -- credit by loi#8700 :)
+                finishpos()
+                -- credit by loi#8700 :)
+                wait(.1)
+                -- credit by loi#8700 :)
+                finishpos()
+                -- credit by loi#8700 :)
+                wait(.1)
+                -- credit by loi#8700 :)
+                finishpos()
+                -- credit by loi#8700 :)
+                wait(.1)
+                -- credit by loi#8700 :)
+                finishpos()
+                -- credit by loi#8700 :)
+      end
+})
