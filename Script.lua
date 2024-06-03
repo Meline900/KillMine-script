@@ -191,7 +191,7 @@ local Road_to_Gramby = Window:MakeTab({
 })
 
 Road_to_Gramby:AddButton({
-    Name = "",
+    Name = "Road to Gramby's GUI Script",
     Callback = function()
               loadstring(game:HttpGet("https://raw.githubusercontent.com/HoodedPeak8313/Road-to-Grambys-Script/main/gui.lua"))()
       end
