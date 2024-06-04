@@ -78,6 +78,13 @@ Tab:AddButton({
       end
 })
 
+Tab:AddButton({
+    Name = "Emotes",
+    Callback = function()
+              loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-all-emotes-6849"))()
+      end
+})
+
 local Chaos = Window:MakeTab({
     Name = "Читы на chaos",
     Icon = "rbxassetid://14273889332",
