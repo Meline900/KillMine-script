@@ -26,7 +26,7 @@ Misc:AddSlider({
 
 Misc:AddSlider({
     Name = "Высота прыжка",
-    Min = 16,
+    Min = 40,
     Max = 500,
     Default = 5,
     Color = Color3.fromRGB(255,255,255),
