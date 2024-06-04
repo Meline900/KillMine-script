@@ -71,6 +71,13 @@ Tab:AddButton({
       end
 })
 
+Tab:AddButton({
+    Name = "telekinesis",
+    Callback = function()
+              loadstring(game:HttpGet("https://pastebin.com/raw/KduE9A6z"))()
+      end
+})
+
 local Chaos = Window:MakeTab({
     Name = "Читы на chaos",
     Icon = "rbxassetid://14273889332",
