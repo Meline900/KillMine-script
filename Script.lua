@@ -14,7 +14,7 @@ Name = "Функционал"
 Misc:AddSlider({
     Name = "Скорость",
     Min = 16,
-    Max = 500,
+    Max = 50000,
     Default = 16,
     Color = Color3.fromRGB(255,255,255),
     Increment = 1,
@@ -27,7 +27,7 @@ Misc:AddSlider({
 Misc:AddSlider({
     Name = "Высота прыжка",
     Min = 40,
-    Max = 500,
+    Max = 50000,
     Default = 5,
     Color = Color3.fromRGB(255,255,255),
     Increment = 1,
