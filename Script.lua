@@ -144,6 +144,13 @@ Brookhaven:AddButton({
       end
 })
 
+Brookhaven:AddButton({
+    Name = "Jul hub (new ice hub)",
+    Callback = function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/JulHubz/JulHub/main/JulHub"))()
+      end
+})
+
 local Slap_Battles = Window:MakeTab({
     Name = "Читы на Slap Battles",
     Icon = "rbxassetid://14273889332",
