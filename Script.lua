@@ -261,3 +261,16 @@ Ball_and_Axe:AddButton({
                 -- credit by loi#8700 :)
       end
 })
+
+local a_dusty_trip = Window:MakeTab({
+    Name = "A dusty trip",
+    Icon = "rbxassetid://14273889332",
+    PremiumOnly = false
+})
+
+a_dusty_trip:AddButton({
+    Name = "Gui сука",
+    Callback = function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))() 
+      end
+})
