@@ -145,6 +145,13 @@ Mm2:AddButton({
       end
 })
 
+Mm2:AddButton({
+    Name = "Byte hub",
+    Callback = function()
+              loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-ByteHub-10357"))()
+      end
+})
+
 local Brookhaven = Window:MakeTab({
     Name = "Читы на Brookhaven",
     Icon = "rbxassetid://14273889332",
