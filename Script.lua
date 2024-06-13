@@ -281,3 +281,16 @@ a_dusty_trip:AddButton({
               loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))() 
       end
 })
+
+local Tower_of_Hell = Window:MakeTab({
+    Name = "Tower Of Hell",
+    Icon = "rbxassetid://14273889332",
+    PremiumOnly = false
+})
+
+Tower_of_Hell:AddButton({
+    Name = "Enable Fly, Tp To Top, Lag Server короче наебка",
+    Callback = function()
+              loadstring(game:HttpGet("https://gist.githubusercontent.com/BloxiYT/85f97364b6367baac677e109488c9905/raw/c2972a2b892c4193509ddb2fe1ba3061435e1a8a/gistfile1.txt"))() 
+      end
+})
