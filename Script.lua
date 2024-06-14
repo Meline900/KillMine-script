@@ -294,3 +294,16 @@ Tower_of_Hell:AddButton({
               loadstring(game:HttpGet("https://gist.githubusercontent.com/BloxiYT/85f97364b6367baac677e109488c9905/raw/c2972a2b892c4193509ddb2fe1ba3061435e1a8a/gistfile1.txt"))() 
       end
 })
+
+local Fling_Things_and_People = Window:MakeTab({
+    Name = "Fling Things and People",
+    Icon = "rbxassetid://14273889332",
+    PremiumOnly = false
+})
+
+Fling_Things_and_People:AddButton({
+    Name = "Ахуительный чит но конфликтует со мной",
+    Callback = function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/BlizTBr/scripts/main/FTAP.lua"))() 
+      end
+})
