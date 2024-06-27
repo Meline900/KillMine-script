@@ -307,3 +307,10 @@ Fling_Things_and_People:AddButton({
               loadstring(game:HttpGet("https://raw.githubusercontent.com/BlizTBr/scripts/main/FTAP.lua"))() 
       end
 })
+
+Fling_Things_and_People:AddButton({
+    Name = "Это слитый скрипт и для солярки",
+    Callback = function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/BlizTBr/scripts/main/FTAP.lua"))() 
+      end
+})
