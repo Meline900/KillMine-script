@@ -93,6 +93,13 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+    Name = "DEX",
+    Callback = function()
+              loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
+      end
+})
+
+Tab:AddButton({
     Name = "UNC Test",
     Callback = function()
         local passes, fails, undefined = 0, 0, 0
@@ -1226,7 +1233,7 @@ Apocalypse_Rising:AddButton({
 })
 
 Apocalypse_Rising:AddButton({
-    Name = "Apocalypse Rising GUI",
+    Name = "Apoc X gui",
     Callback = function()
               loadstring(game:HttpGet("https://pastebin.com/raw/1ruSGisn", true))()
       end
