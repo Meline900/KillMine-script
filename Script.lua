@@ -1051,6 +1051,20 @@ Mm2:AddButton({
       end
 })
 
+Mm2:AddButton({
+    Name = "SnapSanix gui",
+    Callback = function()
+              loadstring(game:HttpGet('https://raw.githubusercontent.com/Roman34296589/SnapSanix-GUI-MM2/main/SnapSanix%20GUI%20mm2.lua'))()
+      end
+})
+
+Mm2:AddButton({
+    Name = "YARHM",
+    Callback = function()
+              loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-YARHM-12403"))()
+      end
+})
+
 local Brookhaven = Window:MakeTab({
     Name = "Читы на Brookhaven",
     Icon = "rbxassetid://14273889332",
