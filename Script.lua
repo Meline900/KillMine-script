@@ -1052,7 +1052,7 @@ Mm2:AddButton({
 })
 
 Mm2:AddButton({
-    Name = "SnapSanix gui",
+    Name = "SnapSanix gui(Not Working)",
     Callback = function()
               loadstring(game:HttpGet('https://raw.githubusercontent.com/Roman34296589/SnapSanix-GUI-MM2/main/SnapSanix%20GUI%20mm2.lua'))()
       end
@@ -1061,7 +1061,7 @@ Mm2:AddButton({
 Mm2:AddButton({
     Name = "YARHM",
     Callback = function()
-              loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-YARHM-12403"))()
+            loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-YARHM-12403"))()
       end
 })
 
@@ -1258,6 +1258,19 @@ Apocalypse_Rising:AddButton({
     Name = "Apoc X gui",
     Callback = function()
               loadstring(game:HttpGet("https://pastebin.com/raw/1ruSGisn", true))()
+      end
+})
+
+local Build_A_Boat_For_Treasure = Window:MakeTab({
+    Name = "Build A Boat For Treasure",
+    Icon = "rbxassetid://14273889332",
+    PremiumOnly = false
+})
+
+Build_A_Boat_For_Treasure:AddButton({
+    Name = "Auto farm",
+    Callback = function()
+              loadstring(game:HttpGet("https://waza-scripts.vercel.app/script/BuildABoat"))()
       end
 })
 
