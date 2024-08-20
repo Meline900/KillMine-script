@@ -33,7 +33,7 @@ Misc:AddSlider({
     Increment = 1,
     ValueName = "Height",
     Callback = function(Value)
-     game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
     end    
 })
 
@@ -97,6 +97,19 @@ Tab:AddButton({
     Name = "Emotes",
     Callback = function()
               loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-all-emotes-6849"))()
+      end
+})
+
+Tab:AddButton({
+    Name = "Rejoin",
+    Callback = function()
+        local ts = game:GetService("TeleportService")
+
+        local p = game:GetService("Players").LocalPlayer
+        
+        
+        
+        ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p)
       end
 })
 
