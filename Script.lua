@@ -1286,6 +1286,18 @@ Build_A_Boat_For_Treasure:AddButton({
               loadstring(game:HttpGet("https://waza-scripts.vercel.app/script/BuildABoat"))()
       end
 })
+local natural_disaster_survival = Window:MakeTab({
+    Name = "Natural disaster survival",
+    Icon = "rbxassetid://14273889332",
+    PremiumOnly = false
+})
+
+natural_disaster_survival:AddButton({
+    Name = "Auto farm",
+    Callback = function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/Meline900/KillMine-script/refs/heads/main/Natural%20Disaster%20Survival"))()
+      end
+})
 
 local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
