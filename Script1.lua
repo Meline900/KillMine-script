@@ -83,16 +83,64 @@ local IY = Tab:CreateButton({
    end,
 })
 
-local IY = Tab:CreateButton({
+local NA = Tab:CreateButton({
    Name = "Nameless Admin",
    Callback = function()
       loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
    end,
 })
 
-local IY = Tab:CreateButton({
-   Name = "Nameless Admin",
+local esp = Tab:CreateButton({
+   Name = "ESP",
    Callback = function()
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
+   end,
+})
+
+local telekinesis = Tab:CreateButton({
+   Name = "Telekinesis",
+   Callback = function()
+      loadstring(game:HttpGet("https://pastebin.com/raw/KduE9A6z"))()
+   end,
+})
+
+local telekinesis = Tab:CreateButton({
+   Name = "Telekinesis",
+   Callback = function()
+      loadstring(game:HttpGet("https://pastebin.com/raw/KduE9A6z"))()
+   end,
+})
+
+local Emotes = Tab:CreateButton({
+   Name = "Emotes",
+   Callback = function()
+      loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-all-emotes-6849"))()
+   end,
+})
+
+local rj = Tab:CreateButton({
+   Name = "Regoin",
+   Callback = function()
+      local ts = game:GetService("TeleportService")
+
+      local p = game:GetService("Players").LocalPlayer
+        
+        
+        
+      ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p)
+   end,
+})
+
+local dex = Tab:CreateButton({
+   Name = "DEX",
+   Callback = function()
+      loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
+   end,
+})
+
+local unc = Tab:CreateButton({
+   Name = "UNC test",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/refs/heads/main/UNCCheckEnv.lua"))()
    end,
 })
