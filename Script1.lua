@@ -82,3 +82,17 @@ local IY = Tab:CreateButton({
       loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
    end,
 })
+
+local IY = Tab:CreateButton({
+   Name = "Nameless Admin",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+   end,
+})
+
+local IY = Tab:CreateButton({
+   Name = "Nameless Admin",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+   end,
+})
