@@ -111,6 +111,13 @@ local Emotes = Tab:CreateButton({
    end,
 })
 
+local unc = Tab:CreateButton({
+   Name = "Jerck off",
+   Callback = function()
+      loadstring(game:HttpGet("https://pastefy.app/wa3v2Vgm/raw"))("Spider Script")
+   end,
+})
+
 local rj = Tab:CreateButton({
    Name = "Regoin",
    Callback = function()
@@ -137,6 +144,10 @@ local unc = Tab:CreateButton({
       loadstring(game:HttpGet("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/refs/heads/main/UNCCheckEnv.lua"))()
    end,
 })
+
+local Tab = Window:CreateTab("Games sripts", "gamepad-2")
+
+
 
 -- WEBHOOK
 local HttpService = game:GetService("HttpService")
