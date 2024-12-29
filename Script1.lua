@@ -154,6 +154,100 @@ local sunc = Tab:CreateButton({
 
 local Tab = Window:CreateTab("Games sripts", "gamepad-2")
 
+local Chaos = Tab:CreateSection("Chaos")
+
+local Kill_gui = Tab:CreateButton({
+   Name = "Kill GUI, Kill Aura",
+   Callback = function()
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/Dan41/Scripts/main/CHAOS%20-%20KILL%20GUI%20V3'),true))()
+   end,
+})
+
+local Gui = Tab:CreateButton({
+   Name = "Gui",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Juanko-Scripts/Roblox-scripts/main/Chaos%20Destrozer%20Hub"))()
+   end,
+})
+
+local Katana = Tab:CreateButton({
+   Name = "Katana",
+   Callback = function()
+      loadstring(game:HttpGet("https://scriptblox.com/raw/Cacophony-Small-Update-Sussy-Hub-12623"))()
+   end,
+})
+
+local LPI = Tab:CreateSection("LPI")
+
+local kick = Tab:CreateButton({
+   Name = "Kill Player, Kick, Bald",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/LPIAlpha", true))()
+   end,
+})
+
+local mm2 = Tab:CreateSection("Mm2")
+
+local esp_mm2 = Tab:CreateButton({
+   Name = "ESP",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))(' Watermelon ?')
+   end,
+})
+
+local Vynixu = Tab:CreateButton({
+   Name = "Vynixu",
+   Callback = function()
+      loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
+   end,
+})
+
+local Byte_Hub = Tab:CreateButton({
+   Name = "Byte_Hub",
+   Callback = function()
+      loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-ByteHub-10357"))()
+   end,
+})
+
+local YARHM = Tab:CreateButton({
+   Name = "YARHM",
+   Callback = function()
+      loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-YARHM-12403"))()
+   end,
+})
+
+local Brookhaven = Tab:CreateSection("Brookhaven")
+
+local D = Tab:CreateButton({
+   Name = "4D",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
+   end,
+})
+
+local Ice = Tab:CreateButton({
+   Name = "Jul hub (new ice hub)",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/JulHubz/JulHub/main/JulHub"))()
+   end,
+})
+
+local Slap_Battles = Tab:CreateSection("Slap Battles")
+
+local Aura = Tab:CreateButton({
+   Name = "Slap Aura, Rejoin (Possible ban)",
+   Callback = function()
+      loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))()
+   end,
+})
+
+local UiIc = Tab:CreateButton({
+   Name = "Ui",
+   Callback = function()
+      loadstring(game:HttpGet("https://scriptblox.com/raw/Slap-Battles-UI-v1-12403"))()
+   end,
+})
+
 
 
 -- WEBHOOK
