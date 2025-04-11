@@ -1,0 +1,166 @@
+--[[
+    WARNING: Используйте на свой страх и риск!
+    Финалная рабочая версия
+]]
+if _G.CanOpenCD == 'Y' or _G.CanOpenCD == nil then
+    _G.CanOpenCD = 'N'
+
+    -- Настройки интерфейса
+    local GUI_SIZE = UDim2.new(0.3, 0, 0.75, 0) -- Увеличен размер окна
+    local CELL_SPACING = 2
+    local PALETTE_BUTTON_SIZE = 30
+
+    -- Цветовая палитра
+    _G.colorPalette = {
+        {color = Color3.new(0,0,0), emoji = "⚫"},
+        {color = Color3.new(1,1,1), emoji = "⚪"},
+        {color = Color3.new(1,0,0), emoji = "🔴"},
+        {color = Color3.new(0,1,0), emoji = "🟢"},
+        {color = Color3.new(0,0,1), emoji = "🔵"},
+        {color = Color3.new(1,1,0), emoji = "🟡"},
+        {color = Color3.new(1,0.5,0), emoji = "🟠"},
+        {color = Color3.new(0.5,0,1), emoji = "🟣"},
+        {color = Color3.new(1,0,1), emoji = "🌸"},
+        {color = Color3.new(0,1,1), emoji = "🌀"}
+    }
+    _G.currentColor = _G.colorPalette[1].color
+
+    -- Создание основных элементов
+    local ScreenGui = Instance.new("ScreenGui")
+    ScreenGui.Parent = game.CoreGui
+    ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+    local MainFrame = Instance.new("Frame")
+    MainFrame.Name = "MainFrame"
+    MainFrame.Parent = ScreenGui
+    MainFrame.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+    MainFrame.BorderSizePixel = 0
+    MainFrame.Position = UDim2.new(0.35, 0, 0.25, 0)
+    MainFrame.Size = GUI_SIZE
+    MainFrame.Active = true
+    MainFrame.Draggable = true
+
+    local UICorner = Instance.new("UICorner")
+    UICorner.CornerRadius = UDim.new(0.03, 0)
+    UICorner.Parent = MainFrame
+
+    -- Сетка для рисования (50% высоты)
+    local GridContainer = Instance.new("Frame")
+    GridContainer.Name = "Grid"
+    GridContainer.Parent = MainFrame
+    GridContainer.BackgroundTransparency = 1
+    GridContainer.Size = UDim2.new(0.9, 0, 0.5, 0)
+    GridContainer.Position = UDim2.new(0.05, 0, 0.05, 0)
+
+    -- Создание клеток
+    local gridSize = 7
+    local cellSize = (GridContainer.AbsoluteSize.X - (gridSize-1)*CELL_SPACING) / gridSize
+    
+    for y = 1, gridSize do
+        for x = 1, gridSize do
+            local cell = Instance.new("TextButton")
+            cell.Name = x.."_"..y
+            cell.Size = UDim2.new(0, cellSize, 0, cellSize)
+            cell.Position = UDim2.new(
+                0, (x-1)*(cellSize + CELL_SPACING),
+                0, (y-1)*(cellSize + CELL_SPACING)
+            )
+            cell.BackgroundColor3 = Color3.new(1,1,1)
+            cell.BorderSizePixel = 0
+            cell.Text = ""
+            cell.Parent = GridContainer
+
+            cell.MouseButton1Click:Connect(function()
+                cell.BackgroundColor3 = cell.BackgroundColor3 == Color3.new(1,1,1) 
+                    and _G.currentColor 
+                    or Color3.new(1,1,1)
+            end)
+        end
+    end
+
+    -- Палитра цветов (20% высоты)
+    local PaletteContainer = Instance.new("Frame")
+    PaletteContainer.Name = "Palette"
+    PaletteContainer.Parent = MainFrame
+    PaletteContainer.BackgroundTransparency = 1
+    PaletteContainer.Size = UDim2.new(0.9, 0, 0.2, 0)
+    PaletteContainer.Position = UDim2.new(0.05, 0, 0.81, 0)
+
+    local UIListLayout = Instance.new("UIListLayout")
+    UIListLayout.Parent = PaletteContainer
+    UIListLayout.FillDirection = Enum.FillDirection.Horizontal
+    UIListLayout.Padding = UDim.new(0.02, 0)
+    UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+
+    for _, colorData in ipairs(_G.colorPalette) do
+        local btn = Instance.new("TextButton")
+        btn.Size = UDim2.new(0, PALETTE_BUTTON_SIZE, 0, PALETTE_BUTTON_SIZE)
+        btn.BackgroundColor3 = colorData.color
+        btn.AutoButtonColor = false
+        btn.Text = ""
+        btn.Parent = PaletteContainer
+
+        local btnCorner = Instance.new("UICorner")
+        btnCorner.CornerRadius = UDim.new(0.3, 0)
+        btnCorner.Parent = btn
+
+        btn.MouseButton1Click:Connect(function()
+            _G.currentColor = colorData.color
+        end)
+    end
+
+    -- Панель управления (15% высоты)
+    local ControlContainer = Instance.new("Frame")
+    ControlContainer.Name = "Controls"
+    ControlContainer.Parent = MainFrame
+    ControlContainer.BackgroundTransparency = 1
+    ControlContainer.Size = UDim2.new(0.9, 0, 0.15, 0)
+    ControlContainer.Position = UDim2.new(0.05, 0, 0.8, 0)
+
+    -- Кнопка отправки
+    local ChatButton = Instance.new("TextButton")
+    ChatButton.Size = UDim2.new(0.7, 0, 0.7, 0)
+    ChatButton.Position = UDim2.new(0.15, 0, 0.5, 0)
+    ChatButton.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
+    ChatButton.TextColor3 = Color3.new(1,1,1)
+    ChatButton.Text = "ОТПРАВИТЬ"
+    ChatButton.TextScaled = true
+    UICorner:Clone().Parent = ChatButton
+    ChatButton.Parent = ControlContainer
+
+    -- Кнопка закрытия
+    local CloseButton = Instance.new("TextButton")
+    CloseButton.Size = UDim2.new(0.15, 0, 0.7, 0)
+    CloseButton.Position = UDim2.new(0.9, 0, -5.7, 0)
+    CloseButton.BackgroundColor3 = Color3.new(0.8, 0, 0)
+    CloseButton.Text = "X"
+    CloseButton.TextColor3 = Color3.new(1,1,1)
+    UICorner:Clone().Parent = CloseButton
+    CloseButton.Parent = ControlContainer
+
+    -- Логика отправки
+    ChatButton.MouseButton1Click:Connect(function()
+        for y = 1, gridSize do
+            local row = ""
+            for x = 1, gridSize do
+                local cell = GridContainer:FindFirstChild(x.."_"..y)
+                if cell then
+                    for _, colorData in ipairs(_G.colorPalette) do
+                        if cell.BackgroundColor3 == colorData.color then
+                            row ..= colorData.emoji
+                            break
+                        end
+                    end
+                end
+            end
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(row)
+            task.wait(0.1)
+        end
+    end)
+
+    -- Логика закрытия
+    CloseButton.MouseButton1Click:Connect(function()
+        _G.CanOpenCD = 'Y'
+        ScreenGui:Destroy()
+    end)
+end
